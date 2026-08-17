@@ -399,6 +399,13 @@ body {
     overflow: hidden;
 }
 
+/* Ensure text and content stay above the decorative flowers */
+.couple-box > *:not(.flower-decoration),
+.event-card > *:not(.flower-decoration) {
+    position: relative;
+    z-index: 20;
+}
+
 .event-title {
     font-family: var(--font-heading);
     font-size: 2rem;
