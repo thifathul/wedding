@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize AOS Animation
     AOS.init({
-        duration: 1000,
+        duration: 1200,
+        easing: 'ease-out-back',
         once: true,
         offset: 50
     });
@@ -23,8 +24,23 @@ document.addEventListener('DOMContentLoaded', function() {
             mainContent.style.display = 'block';
             musicPlayer.style.display = 'flex';
             
-            // Re-init AOS to trigger animations in main content
-            AOS.refresh();
+            // Re-init AOS to trigger animations in main content properly
+            // Because mainContent was display: none, AOS already added aos-animate to them at Y=0.
+            // We need to remove it and refresh.
+            document.querySelectorAll('#main-content [data-aos]').forEach(el => {
+                el.classList.remove('aos-animate');
+                el.classList.remove('aos-init');
+            });
+            
+            setTimeout(() => {
+                AOS.init({
+                    duration: 1200,
+                    easing: 'ease-out-back',
+                    once: true,
+                    offset: 50
+                });
+                AOS.refresh();
+            }, 100);
             
             // Play Audio
             bgAudio.play().catch(e => console.log("Audio autoplay prevented"));

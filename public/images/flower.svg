@@ -1,0 +1,51 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <!-- Main Stem -->
+    <path d="M100 200 Q 80 120 140 50" fill="none" stroke="#7ebc89" stroke-width="6" stroke-linecap="round"/>
+    
+    <!-- Leaves -->
+    <!-- Leaf 1 (Left) -->
+    <path d="M90 150 Q 50 140 40 100 Q 70 120 90 150" fill="#a4d4ae"/>
+    <!-- Leaf 2 (Right) -->
+    <path d="M120 110 Q 170 120 180 80 Q 150 70 120 110" fill="#a4d4ae"/>
+    <!-- Leaf 3 (Left higher) -->
+    <path d="M105 100 Q 70 80 60 40 Q 90 60 105 100" fill="#a4d4ae"/>
+    
+    <!-- Flower 1 (Main at top right) -->
+    <g transform="translate(140, 50) scale(0.9)">
+        <path d="M0 0 C -25 -50, 25 -50, 0 0" fill="#ff8fa3" transform="rotate(0)"/>
+        <path d="M0 0 C -25 -50, 25 -50, 0 0" fill="#ff8fa3" transform="rotate(72)"/>
+        <path d="M0 0 C -25 -50, 25 -50, 0 0" fill="#ff8fa3" transform="rotate(144)"/>
+        <path d="M0 0 C -25 -50, 25 -50, 0 0" fill="#ff8fa3" transform="rotate(216)"/>
+        <path d="M0 0 C -25 -50, 25 -50, 0 0" fill="#ff8fa3" transform="rotate(288)"/>
+        <circle cx="0" cy="0" r="10" fill="#ffe5ec"/>
+        <circle cx="0" cy="0" r="6" fill="#ffb3c6"/>
+    </g>
+
+    <!-- Branch 2 (Left) -->
+    <path d="M95 130 Q 60 90 50 50" fill="none" stroke="#7ebc89" stroke-width="4" stroke-linecap="round"/>
+    
+    <!-- Flower 2 (Smaller on left) -->
+    <g transform="translate(50, 50) scale(0.6)">
+        <path d="M0 0 C -25 -50, 25 -50, 0 0" fill="#ffb3c6" transform="rotate(36)"/>
+        <path d="M0 0 C -25 -50, 25 -50, 0 0" fill="#ffb3c6" transform="rotate(108)"/>
+        <path d="M0 0 C -25 -50, 25 -50, 0 0" fill="#ffb3c6" transform="rotate(180)"/>
+        <path d="M0 0 C -25 -50, 25 -50, 0 0" fill="#ffb3c6" transform="rotate(252)"/>
+        <path d="M0 0 C -25 -50, 25 -50, 0 0" fill="#ffb3c6" transform="rotate(324)"/>
+        <circle cx="0" cy="0" r="10" fill="#ffe5ec"/>
+        <circle cx="0" cy="0" r="6" fill="#ff8fa3"/>
+    </g>
+
+    <!-- Branch 3 (Lower right) -->
+    <path d="M98 170 Q 140 150 160 130" fill="none" stroke="#7ebc89" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Flower 3 (Smallest on right) -->
+    <g transform="translate(160, 130) scale(0.45)">
+        <path d="M0 0 C -25 -50, 25 -50, 0 0" fill="#ff8fa3" transform="rotate(0)"/>
+        <path d="M0 0 C -25 -50, 25 -50, 0 0" fill="#ff8fa3" transform="rotate(72)"/>
+        <path d="M0 0 C -25 -50, 25 -50, 0 0" fill="#ff8fa3" transform="rotate(144)"/>
+        <path d="M0 0 C -25 -50, 25 -50, 0 0" fill="#ff8fa3" transform="rotate(216)"/>
+        <path d="M0 0 C -25 -50, 25 -50, 0 0" fill="#ff8fa3" transform="rotate(288)"/>
+        <circle cx="0" cy="0" r="10" fill="#ffe5ec"/>
+        <circle cx="0" cy="0" r="6" fill="#ffb3c6"/>
+    </g>
+</svg>

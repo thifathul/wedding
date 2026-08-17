@@ -170,6 +170,10 @@
             <label for="resepsi_location">Lokasi Resepsi</label>
             <textarea name="resepsi_location" id="resepsi_location" rows="3">{{ old('resepsi_location', $settings->resepsi_location ?? "Gedung Serbaguna\nJl. Contoh Alamat No. 123, Kota Bandung") }}</textarea>
         </div>
+        <div class="form-group">
+            <label for="location_link">Link Lokasi (Google Maps, untuk tombol Lihat Lokasi)</label>
+            <input type="text" name="location_link" id="location_link" value="{{ old('location_link', $settings->location_link ?? '') }}" placeholder="https://maps.app.goo.gl/...">
+        </div>
 
         <hr style="margin: 40px 0; border: none; border-top: 1px solid #ddd;">
         <h2>Kado Digital (Rekening)</h2>
