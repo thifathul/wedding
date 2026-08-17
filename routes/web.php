@@ -19,3 +19,8 @@ Route::middleware('auth')->group(function () {
     Route::post('/admin', [AdminController::class, 'update'])->name('admin.update');
     Route::post('/admin/gallery/{id}', [AdminController::class, 'deleteGallery'])->name('admin.gallery.delete');
 });
+// Helper route for Hostinger deployment
+Route::get('/migrate', function () {
+    \Illuminate\Support\Facades\Artisan::call('migrate', ['--force' => true]);
+    return 'Database berhasil di-update (Migration sukses)!';
+});

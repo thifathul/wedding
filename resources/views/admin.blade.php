@@ -128,6 +128,10 @@
             <label for="groom_parents">Nama Orang Tua Pria</label>
             <input type="text" name="groom_parents" id="groom_parents" value="{{ old('groom_parents', $settings->groom_parents ?? 'Putra dari Bapak Fulan & Ibu Fulanah') }}">
         </div>
+        <div class="form-group">
+            <label for="groom_ig">Link Instagram Pria (Opsional, misal: https://instagram.com/username)</label>
+            <input type="text" name="groom_ig" id="groom_ig" value="{{ old('groom_ig', $settings->groom_ig ?? '') }}">
+        </div>
 
         <div class="form-group">
             <label for="bride_name">Nama Panggilan Wanita</label>
@@ -140,6 +144,10 @@
         <div class="form-group">
             <label for="bride_parents">Nama Orang Tua Wanita</label>
             <input type="text" name="bride_parents" id="bride_parents" value="{{ old('bride_parents', $settings->bride_parents ?? 'Putri dari Bapak Fulan & Ibu Fulanah') }}">
+        </div>
+        <div class="form-group">
+            <label for="bride_ig">Link Instagram Wanita (Opsional, misal: https://instagram.com/username)</label>
+            <input type="text" name="bride_ig" id="bride_ig" value="{{ old('bride_ig', $settings->bride_ig ?? '') }}">
         </div>
 
         <hr style="margin: 40px 0; border: none; border-top: 1px solid #ddd;">

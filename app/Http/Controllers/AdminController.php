@@ -36,6 +36,8 @@ class AdminController extends Controller
             'bride_name' => 'nullable|string|max:255',
             'groom_fullname' => 'nullable|string|max:255',
             'bride_fullname' => 'nullable|string|max:255',
+            'groom_ig' => 'nullable|string|max:255',
+            'bride_ig' => 'nullable|string|max:255',
             'groom_parents' => 'nullable|string|max:255',
             'bride_parents' => 'nullable|string|max:255',
             'wedding_date' => 'nullable|string|max:255',
@@ -90,7 +92,7 @@ class AdminController extends Controller
         // Save text fields
         $textFields = [
             'groom_name', 'bride_name', 'groom_fullname', 'bride_fullname',
-            'groom_parents', 'bride_parents', 'wedding_date', 'akad_date',
+            'groom_ig', 'bride_ig', 'groom_parents', 'bride_parents', 'wedding_date', 'akad_date',
             'akad_time', 'resepsi_date', 'resepsi_time', 'resepsi_location', 'location_link',
             'bank_name', 'bank_account', 'bank_account_name',
             'bank_name_2', 'bank_account_2', 'bank_account_name_2',

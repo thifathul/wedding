@@ -318,6 +318,26 @@ body {
     margin-bottom: 10px;
 }
 
+.ig-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+    color: #e1306c;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 8px 15px;
+    border: 1px solid #e1306c;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.ig-link:hover {
+    background: #e1306c;
+    color: #fff;
+}
+
 .and-text {
     font-family: var(--font-cursive);
     font-size: 4rem;

@@ -85,6 +85,12 @@
                         <h2 class="couple-name-small">{{ $settings->groom_name ?? 'Candra' }}</h2>
                         <p class="couple-fullname"><strong>{{ $settings->groom_fullname ?? 'Candra Wijaya, S.T.' }}</strong></p>
                         <p class="parents">{{ $settings->groom_parents ?? 'Putra dari Bapak Fulan & Ibu Fulanah' }}</p>
+                        @if($settings && $settings->groom_ig)
+                            <a href="{{ $settings->groom_ig }}" target="_blank" class="ig-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                                Instagram
+                            </a>
+                        @endif
                     </div>
                     
                     <h1 class="and-text" data-aos="zoom-in-up">&</h1>
@@ -99,6 +105,12 @@
                         <h2 class="couple-name-small">{{ $settings->bride_name ?? 'Anisa' }}</h2>
                         <p class="couple-fullname"><strong>{{ $settings->bride_fullname ?? 'Anisa Putri, S.E.' }}</strong></p>
                         <p class="parents">{{ $settings->bride_parents ?? 'Putri dari Bapak Fulan & Ibu Fulanah' }}</p>
+                        @if($settings && $settings->bride_ig)
+                            <a href="{{ $settings->bride_ig }}" target="_blank" class="ig-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                                Instagram
+                            </a>
+                        @endif
                     </div>
                 </div>
             </div>
