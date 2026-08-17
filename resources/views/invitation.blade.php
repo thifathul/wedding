@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Wedding of {{ $settings->bride_name ?? 'Arin' }} & {{ $settings->groom_name ?? 'Andrian' }}</title>
+    <link rel="icon" type="image/svg+xml" href="{{ asset('images/flower.svg') }}">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
