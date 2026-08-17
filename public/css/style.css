@@ -264,6 +264,7 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
     position: relative;
+    overflow: hidden;
 }
 
 .couple-box:hover {
@@ -395,6 +396,7 @@ body {
     margin-bottom: 30px;
     border-top: 5px solid var(--secondary-color);
     position: relative;
+    overflow: hidden;
 }
 
 .event-title {
