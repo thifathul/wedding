@@ -54,7 +54,7 @@ class AdminController extends Controller
             'bank_account_2' => 'nullable|string|max:255',
             'bank_account_name_2' => 'nullable|string|max:255',
             'youtube_link' => 'nullable|string|max:500',
-            'gallery_images.*' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:5120',
+            'gallery_images.*' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:10240',
         ]);
 
         $fields = ['cover_image', 'desktop_bg_image', 'bg_video', 'bg_music', 'groom_image', 'bride_image'];
