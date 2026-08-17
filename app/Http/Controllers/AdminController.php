@@ -59,16 +59,20 @@ class AdminController extends Controller
 
         foreach ($fields as $field) {
             if ($request->hasFile($field)) {
-                // Delete old file if exists and it's a local file (not the default external URL)
+                // Delete old file if exists
                 if ($settings->$field && !str_starts_with($settings->$field, 'http')) {
-                    // Extract path from storage URL if needed, but we store relative path
-                    Storage::disk('public')->delete(str_replace('storage/', '', $settings->$field));
+                    if (file_exists(public_path($settings->$field))) {
+                        unlink(public_path($settings->$field));
+                    }
                 }
 
-                // Store new file
-                $path = $request->file($field)->store('uploads', 'public');
+                // Store new file directly in public folder to avoid symlink issues
+                $file = $request->file($field);
+                $filename = $field . '_' . time() . '_' . uniqid() . '.' . $file->getClientOriginalExtension();
+                $file->move(public_path('uploads/media'), $filename);
+                
                 // Save the path to database
-                $settings->$field = 'storage/' . $path;
+                $settings->$field = 'uploads/media/' . $filename;
             }
         }
 
