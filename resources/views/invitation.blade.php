@@ -270,14 +270,14 @@
                     Merupakan suatu kehormatan dan kebahagiaan bagi kami, apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu. Atas kehadiran dan doa restunya, kami mengucapkan terima kasih.<br><br>
                     Kami yang berbahagia
                 </p>
-                <h2 class="couple-name-small" style="font-family: 'Great Vibes', cursive; font-size: 3em; margin-top: 10px; color: #ffffff;">
-                    {{ $settings->bride_name ?? 'Anisa' }} & {{ $settings->groom_name ?? 'Candra' }}
+                <h2 class="couple-name-small" style="font-family: var(--font-cursive); font-size: 2.5em; margin-top: 10px; color: #ffffff;">
+                    {{ ucwords($settings->bride_name ?? 'Arin') }} & {{ ucwords($settings->groom_name ?? 'Andrian') }}
                 </h2>
             </div>
         </section>
 
         <footer class="footer text-center">
-            <p>Made with &hearts; for {{ $settings->bride_name ?? 'Anisa' }} & {{ $settings->groom_name ?? 'Candra' }}</p>
+            <p>Made with &hearts; for {{ ucwords($settings->bride_name ?? 'Arin') }} & {{ ucwords($settings->groom_name ?? 'Andrian') }}</p>
         </footer>
     </div>
 
