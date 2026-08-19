@@ -260,6 +260,22 @@
             </div>
         </section>
 
+        <!-- Closing Section -->
+        <section class="closing-section section-padding text-center" id="closing">
+            <div class="container" data-aos="zoom-in-up">
+                <div class="closing-image-wrapper" style="max-width: 350px; margin: 0 auto 30px;">
+                    <img src="{{ asset('images/closing-image.png') }}" alt="Closing Image" style="width: 100%; height: auto;">
+                </div>
+                <p class="closing-text" style="font-size: 1.1em; line-height: 1.6; margin-bottom: 20px; font-family: 'Montserrat', sans-serif; color: #ffffff;">
+                    Merupakan suatu kehormatan dan kebahagiaan bagi kami, apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu. Atas kehadiran dan doa restunya, kami mengucapkan terima kasih.<br><br>
+                    Kami yang berbahagia
+                </p>
+                <h2 class="couple-name-small" style="font-family: 'Great Vibes', cursive; font-size: 3em; margin-top: 10px; color: #ffffff;">
+                    {{ $settings->bride_name ?? 'Anisa' }} & {{ $settings->groom_name ?? 'Candra' }}
+                </h2>
+            </div>
+        </section>
+
         <footer class="footer text-center">
             <p>Made with &hearts; for {{ $settings->bride_name ?? 'Anisa' }} & {{ $settings->groom_name ?? 'Candra' }}</p>
         </footer>
