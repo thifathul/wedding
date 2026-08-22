@@ -53,6 +53,7 @@ class AdminController extends Controller
             'bank_name_2' => 'nullable|string|max:255',
             'bank_account_2' => 'nullable|string|max:255',
             'bank_account_name_2' => 'nullable|string|max:255',
+            'gift_address' => 'nullable|string',
             'youtube_link' => 'nullable|string|max:500',
             'gallery_images.*' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:10240',
         ]);
@@ -96,7 +97,7 @@ class AdminController extends Controller
             'akad_time', 'resepsi_date', 'resepsi_time', 'resepsi_location', 'location_link',
             'bank_name', 'bank_account', 'bank_account_name',
             'bank_name_2', 'bank_account_2', 'bank_account_name_2',
-            'youtube_link'
+            'gift_address', 'youtube_link'
         ];
 
         foreach ($textFields as $field) {

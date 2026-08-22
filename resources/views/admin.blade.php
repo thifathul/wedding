@@ -216,6 +216,13 @@
         </div>
 
         <hr style="margin: 20px 0; border: none; border-top: 1px dashed #ddd;">
+
+        <div class="form-group">
+            <label for="gift_address">Alamat Pengiriman Kado Fisik (Opsional)</label>
+            <textarea name="gift_address" id="gift_address" rows="3" placeholder="Contoh: Jl. Merdeka No. 123, RT/RW 01/02, Kel. ABC, Kec. DEF, Kota/Kab. GHI">{{ old('gift_address', $settings->gift_address ?? '') }}</textarea>
+        </div>
+
+        <hr style="margin: 20px 0; border: none; border-top: 1px dashed #ddd;">
         
         <h2>Video Momen (YouTube)</h2>
         <div class="form-group">

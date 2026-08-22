@@ -257,6 +257,17 @@
                     </div>
                     @endif
                 </div>
+
+                @if($settings && $settings->gift_address)
+                <div class="gift-address-wrapper" data-aos="zoom-in-up" data-aos-delay="600" style="margin-top: 40px; color: #ffffff;">
+                    <h3 style="color: #ffffff;">Kado Fisik</h3>
+                    <p style="margin-bottom: 15px; color: #ffffff;">Bagi yang ingin mengirimkan kado fisik, dapat dikirimkan ke alamat berikut:</p>
+                    <div class="bank-card" style="margin-left: auto; margin-right: auto; max-width: 600px; padding: 20px;">
+                        <p id="gift-address-text" style="white-space: pre-line; line-height: 1.6; margin-bottom: 0; color: #333333;">{{ $settings->gift_address }}</p>
+                        <button class="btn-copy" onclick="copyToClipboard('gift-address-text', this)" style="margin-top: 15px;">Salin Alamat</button>
+                    </div>
+                </div>
+                @endif
             </div>
         </section>
 
