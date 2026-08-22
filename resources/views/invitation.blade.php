@@ -184,6 +184,43 @@
         </section>
         @endif
 
+        <!-- Digital Gift Section -->
+        <section class="gift-section section-padding text-center" id="gift">
+            <div class="container">
+                <h2 class="section-title" data-aos="zoom-in-up">Kado Digital</h2>
+                <p data-aos="zoom-in-up">Bagi bapak/ibu/saudara/i yang ingin memberikan tanda kasih, dapat melalui nomor rekening di bawah ini:</p>
+                
+                <div class="banks-wrapper" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                    <div class="bank-card" data-aos="zoom-in-up" data-aos-delay="200" style="margin-top: 30px; margin-left: auto; margin-right: auto; flex: 1; min-width: 280px; max-width: 400px;">
+                        <h3>{{ $settings->bank_name ?? 'BCA' }}</h3>
+                        <p class="account-number" id="rek-1">{{ $settings->bank_account ?? '1234567890' }}</p>
+                        <p>{{ $settings->bank_account_name ?? 'a.n. Candra Wijaya' }}</p>
+                        <button class="btn-copy" onclick="copyToClipboard('rek-1', this)">Salin Rekening</button>
+                    </div>
+
+                    @if($settings && $settings->bank_name_2 && $settings->bank_account_2)
+                    <div class="bank-card" data-aos="zoom-in-up" data-aos-delay="400" style="margin-top: 30px; margin-left: auto; margin-right: auto; flex: 1; min-width: 280px; max-width: 400px;">
+                        <h3>{{ $settings->bank_name_2 }}</h3>
+                        <p class="account-number" id="rek-2">{{ $settings->bank_account_2 }}</p>
+                        <p>{{ $settings->bank_account_name_2 }}</p>
+                        <button class="btn-copy" onclick="copyToClipboard('rek-2', this)">Salin Rekening</button>
+                    </div>
+                    @endif
+                </div>
+
+                @if($settings && $settings->gift_address)
+                <div class="gift-address-wrapper" data-aos="zoom-in-up" data-aos-delay="600" style="margin-top: 40px; color: #ffffff;">
+                    <h3 style="color: #ffffff;">Kado Fisik</h3>
+                    <p style="margin-bottom: 15px; color: #ffffff;">Bagi yang ingin mengirimkan kado fisik, dapat dikirimkan ke alamat berikut:</p>
+                    <div class="bank-card" style="margin-left: auto; margin-right: auto; max-width: 600px; padding: 20px;">
+                        <p id="gift-address-text" style="white-space: pre-line; line-height: 1.6; margin-bottom: 0; color: #333333;">{{ $settings->gift_address }}</p>
+                        <button class="btn-copy" onclick="copyToClipboard('gift-address-text', this)" style="margin-top: 15px;">Salin Alamat</button>
+                    </div>
+                </div>
+                @endif
+            </div>
+        </section>
+
         <!-- RSVP & Guestbook Section -->
         <section class="rsvp-section section-padding" id="rsvp">
             <div class="container">
@@ -231,43 +268,6 @@
                         @endforeach
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Digital Gift Section -->
-        <section class="gift-section section-padding text-center" id="gift">
-            <div class="container">
-                <h2 class="section-title" data-aos="zoom-in-up">Kado Digital</h2>
-                <p data-aos="zoom-in-up">Bagi bapak/ibu/saudara/i yang ingin memberikan tanda kasih, dapat melalui nomor rekening di bawah ini:</p>
-                
-                <div class="banks-wrapper" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                    <div class="bank-card" data-aos="zoom-in-up" data-aos-delay="200" style="margin-top: 30px; margin-left: auto; margin-right: auto; flex: 1; min-width: 280px; max-width: 400px;">
-                        <h3>{{ $settings->bank_name ?? 'BCA' }}</h3>
-                        <p class="account-number" id="rek-1">{{ $settings->bank_account ?? '1234567890' }}</p>
-                        <p>{{ $settings->bank_account_name ?? 'a.n. Candra Wijaya' }}</p>
-                        <button class="btn-copy" onclick="copyToClipboard('rek-1', this)">Salin Rekening</button>
-                    </div>
-
-                    @if($settings && $settings->bank_name_2 && $settings->bank_account_2)
-                    <div class="bank-card" data-aos="zoom-in-up" data-aos-delay="400" style="margin-top: 30px; margin-left: auto; margin-right: auto; flex: 1; min-width: 280px; max-width: 400px;">
-                        <h3>{{ $settings->bank_name_2 }}</h3>
-                        <p class="account-number" id="rek-2">{{ $settings->bank_account_2 }}</p>
-                        <p>{{ $settings->bank_account_name_2 }}</p>
-                        <button class="btn-copy" onclick="copyToClipboard('rek-2', this)">Salin Rekening</button>
-                    </div>
-                    @endif
-                </div>
-
-                @if($settings && $settings->gift_address)
-                <div class="gift-address-wrapper" data-aos="zoom-in-up" data-aos-delay="600" style="margin-top: 40px; color: #ffffff;">
-                    <h3 style="color: #ffffff;">Kado Fisik</h3>
-                    <p style="margin-bottom: 15px; color: #ffffff;">Bagi yang ingin mengirimkan kado fisik, dapat dikirimkan ke alamat berikut:</p>
-                    <div class="bank-card" style="margin-left: auto; margin-right: auto; max-width: 600px; padding: 20px;">
-                        <p id="gift-address-text" style="white-space: pre-line; line-height: 1.6; margin-bottom: 0; color: #333333;">{{ $settings->gift_address }}</p>
-                        <button class="btn-copy" onclick="copyToClipboard('gift-address-text', this)" style="margin-top: 15px;">Salin Alamat</button>
-                    </div>
-                </div>
-                @endif
             </div>
         </section>
 
